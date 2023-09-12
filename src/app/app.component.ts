@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Input, EventEmitter, Output  } from '@angular/core';
 
 @Component({
   selector: 'app-root',

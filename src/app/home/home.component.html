@@ -1,0 +1,77 @@
+<div class="container mt-5" style="height: 90vh; width: 90vh;" [ngStyle]="{'background-color': color}">
+
+    <form >
+      <div class="row  w-100 ms-1" style="height: 100%;"
+     
+      >
+          <div class="col-lg-6" >
+              <div class="row ">
+<div class="rounded-circle border ms-5 mt-4" style="height: 200px; width: 200px;" [ngStyle]="{'background-color': color}">
+                    <img class="img-fluid"  alt="" [src]="imageUrl"  style="object-fit: contain;" >
+  
+</div>                 <div class="text-center fs-4 nm"  >{{name}}</div>
+                 <div class="text-center gn" >{{gender}}</div>
+
+              </div>
+              <div class="row mt-3">
+                  <div class="col-lg-6" >
+                      <label for="Date" class="form-label"><i class="fa-solid fa-calendar-days"></i>Date</label>
+                    <input type="text" class="form-control  no-border" placeholder="Birth Date" aria-label="First name" id="Date"  name="date"
+                    #date="ngModel"[(ngModel)]="AllUsers.birthDate" >
+                  </div>
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-5">
+                      <label for="Age" class="form-label"><i class="fa-solid fa-calendar-minus"></i> Age</label>
+                    <input type="text" class="form-control" placeholder="Age" aria-label="Last name" id="Age" name="Age" #Age="ngModel" [(ngModel)]="AllUsers.age">
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-lg-6">
+                  <label for="weight" class="form-label"><i class="fa-solid fa-weight-scale"></i> Weight</label>
+                    <input type="text" class="form-control" placeholder="weight" aria-label="weight" id="weight" name="weight" #weight=ngModel [(ngModel)]="AllUsers.weight">
+                  </div>
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-5">
+                      <label for="Height" class="form-label"><i class="fa-solid fa-person"></i> Height</label>
+                    <input type="text" class="form-control" placeholder="height" aria-label="height" id="height" name="height" #height="ngModel" [(ngModel)]="AllUsers.height">
+                  </div>
+                </div>
+                <div class="row mt-5">     
+              <button type="button" class="btn btn-warning w-25 " style="margin-left: 118px;"(click)="UserList()" (click)="colourchange()" (click)="getRandom() " >Refresh</button>
+                </div>
+             
+           </div>
+           <div class="col-lg-1"></div>
+           <div class="col-lg-5 mt-5">
+              <form class="mt-5">
+                  <div class="mb-3 ">
+                    <label for="Home-Adress" class="form-label"><i class="fa-solid fa-location-dot"></i>Home Adress</label>
+                    <input type="text" class="form-control" id="Home-Adress" aria-describedby="emailHelp" name="adress" #adress="ngModel" [(ngModel)]="AllUsers.address.address">
+                  </div>
+                  <div class="mb-3">
+                    <label for="mb-phone" class="form-label"><i class="fa-solid fa-mobile"></i> Mobile Phone</label>
+                    <input type="text" class="form-control" id="mb-phone"  name="ph" #ph ="ngModel" [(ngModel)]="AllUsers.phone">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"><i class="fa-regular fa-id-badge"></i> Company</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1"
+                      name="company" #company =ngModel [(ngModel)]="AllUsers.company.name"> 
+                    </div>
+                    <div class="mb-3">
+                      <label for="Job-Title" class="form-label"><i class="fa-solid fa-user-tie"></i> Job Title</label>
+                      <input type="text" class="form-control" id="Job-Title" 
+                      name="title" #title="ngModel" [(ngModel)]="AllUsers.company.title">
+                    </div>
+                    <div class="mb-3">
+                      <label for="Email" class="form-label"><i class="fa-solid fa-at"></i> Email</label>
+                      <input type="email" class="form-control" id="email" name="email" #email="ngModel" [(ngModel)]="AllUsers.email">
+                    </div>
+                  
+                </form>
+           </div>
+          </div>
+    </form>
+   
+</div>
+
+       
